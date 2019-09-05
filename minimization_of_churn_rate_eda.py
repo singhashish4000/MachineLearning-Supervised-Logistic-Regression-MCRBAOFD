@@ -113,9 +113,9 @@ cmap = sn.diverging_palette(220, 10, as_cmap=True)
 sn.heatmap(corr, mask=mask, cmap=cmap, vmax=0.3, center=0, square=True, linewidths=0.5, cbar_kws={"shrink": 0.5})
 
 
+dataset = dataset.drop(columns = ['app_web_user'])
 
-
-
+dataset.to_csv('new_churn_data.csv', index=False)
 
 
 
